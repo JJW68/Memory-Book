@@ -2,12 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "../website/website/images"
-		},
-		{
-			"path": "../website/website/music"
 		}
 	],
 	"settings": {}

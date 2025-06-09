@@ -9,48 +9,67 @@
     <!-- navigation menu -->
     <ul>
       <!-- set home page active -->
-      <li><a href="index.html" class ="active">Home</a></li> 
-      <li><a href="toronto.html" class ="">Toronto</a></li>
-      <li><a href="art.html" class ="">Art</a></li>
-      <li><a href="playlist.html" class ="">Playlist</a></li>
-      <li><a href="contact.html" class ="">Contact</a></li>
-      <li><a href="guide.html" class ="">Guide</a></li>
       <li class="dropdown">
-        <a href="memories.html">Memory Book</a>
-        <div class="dropdown-content">
-          <a href="creative-ws.html">Creative Workspace</a>
-          <a href="milestones.html">Milestones</a>
+        <a href="index.html"class="active">Home</a>
+        <div class="dropdown-content"class="">
           <a href="entertainment.html" class="">Entertainment</a>
-          <a href="travel.html">Travel</a>
+          <a href="creativity.html" class="">Creative Workspace</a>
+          <a href="milestones.html" class="">Milestones</a>
+          <a href="songs.html" class="">Songs</a>
+          <a href="travel.html" class="">Travel</a>
+          <a href="special-events.html" class="">Special Events</a>
         </div>
       </li>
     </ul>
     <div id="content">
-      <h2>Welcome to my website!</h2>
-      <h2>About me</h2>
-      <!-- container to hold text/information -->
-      <div class="container">
-          <p>Born and raised in Toronto; 100% night owl; hoodie enthusiast; drama addict; aspiring to find the perfect snack</p>
-      </div>
-      <!-- add a space underneath (adjusted in the css file) to seperate the two textboxes -->
-      <div class="space-underneath"></div>
-      <!-- another container for a second textbox -->
-      <div class="container">
+      <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+      <div class="memory-title">The Echoes of Yesterday</div>
+      <!-- <div class="container"> -->
+      <div class="bubble1-container">
         <!-- I want two images in a circular shape on the page so I add a class so I can design the circles in the .css file. 
           The reason the circles are in the container is so that they are able to move with the webpage as its size is adjusted or when it is scrolled. -->
-        <div class="circle1">
-          <img src="images/grad.png" alt="Grad">
+        <div class="bubble1">
+          <img src="images/creative-ws.jpg" alt="Creative WS">
+          <div class="creative-text">Creative Workspace</div>
         </div>
-        <div class="circle2">
-          <img src="images/toronto.jpeg" alt="Toronto">
+      </div>
+      <div class="bubble2-container">
+        <div class="bubble2">
+          <img src="images/special-events.jpg" alt="Special Events">
+          <div class="events-text">Special Events</div>
         </div>
-        <!-- add a class so the information in this text box can be left-aligned -->
-        <p class ="left-aligned"><b>Fun fact:</b> I like collecting coins</p>
-        <p class ="left-aligned"><b>Hobbies:</b> Arts and crafts, skating, piano, journaling</p>
-        <p class ="left-aligned"><b>Comfort songs:</b> Set Fire to the Rain by Adele, Silence by Marshmello ft.Khalid</p>
-        <p class ="left-aligned"><b>Favourite books:</b> Wonder by R.J Palacio, City of Bones by Cassandra Clare</p>
-        <p class ="left-aligned"><b>Inspirational films:</b> Better days by Kwok Cheung Tsang, All Quiet on the Wester Front (1979) by Delbert Mann</p>
-      </div>   
+      </div>
+      <div class="bubble3-container">
+        <div class="bubble3">
+          <img src="images/travel.jpg" alt="Travel">
+          <div class="travel-text">Travel</div>
+        </div>
+      </div>
+      <div class="bubble4-container">
+        <div class="bubble4">
+          <img src="images/milestones.jpg" alt="Milestones">
+          <div class="milestones-text">Milestones</div>
+        </div>
+      </div>
+      <div class="bubble5-container">
+        <div class="bubble5">
+          <img src="images/songs.jpg" alt="Songs">
+          <div class="songs-text">Songs</div>
+        </div>
+      </div>
+      <div class="bubble6-container"></div>
+        <div class="bubble6">
+          <img src="images/entertainment.jpg" alt="Entertainment">
+          <div class="entertainment-text">Entertainment</div>
+        </div>
+      </div>
+      <div class="bub1-container">
+        <div class="bub1">
+          <img src="images/bubble.jpg" alt="Bubble">
+        </div>
+      </div>
     </div>
+    
   </body>
 </html>
