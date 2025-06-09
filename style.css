@@ -1,0 +1,1442 @@
+/* design for the website layout */
+
+/* styling for the navigation bar */
+ul {
+  list-style-type: none;
+  margin: 50px;
+  padding: 0;
+  background-color: #95e5f9;
+  height: 35px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* a box shadow adds texture to the elements and makes it stand out more */
+}
+
+/* styling the text of the navigation bar */
+li a {
+  color: #000;
+  width: 60px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* when the cursor is hovering over another section on the navigation bar, the colour will change to indicate that */
+li a:hover {
+  background-color: #1f47cb;
+  color: white;
+}
+
+/* the page that is currently active will have a different colour on the navigation bar to show this */
+li .active {
+  background-color: #2471ff;
+  color: white;
+}
+
+/* to make the navigation bar responsive, I added a media query so the navigation bar adjusts according to the size of the webpage */
+@media screen and (max-width: 600px) {
+  ul {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* general components that apply to all webpages */
+
+/* for text that I want vertically aligned */
+#content {
+  text-align: center;
+}
+
+/* for text that I want aligned on the left*/
+.left-aligned {
+  text-align: left;
+}
+
+/* styling the container that holds all the text and information on each page  */
+.container {
+  max-width: 500px; /* I use 'max-width' instead of 'width' so the container adjusts in size when the webpage is adjusted to be smaller than 500px */
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #bbf3ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* for spacing between elements */
+.space-underneath {
+  height: 40px; /* Adjust the desired height for the space */
+}
+
+/* index/home page */
+
+/* styling a circle shape to hold an image */
+.circle1 {
+  margin-left: 550px;
+  margin-top: -240px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* styling the grad image to match the circle shape */
+.circle1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* styling another circle shape */
+.circle2 {
+  margin-left: -290px;
+  margin-top: -240px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* styling the other image of toronto to match the circle shape */
+.circle2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* adding a media query so that when the webpage size shrinks to a certain size, the pictures become hidden and only the information shows */
+@media screen and (max-width: 900px) {
+  .circle1, .circle2 {
+    display: none;
+  }
+}
+
+/* toronto  page */
+
+/* styling the grid container which is the structure of my information on this page */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* the grid has 2 columns and 4 rows */
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 50px;
+}
+
+/* styling the individual items in the grid */
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* adjusting the images that go in some sections of the grid */
+.image-grid img {
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* media query for when the webpage becomes a certain size or when viewed from a phone, the grid becomes one column and the items are all vertically aligned */
+@media screen and (max-width: 900px) {
+  #grid-id {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item:nth-child(even) {
+    border: 3px solid #ccc;
+    border-top: 0;
+  }
+
+  .grid-item:nth-child(odd) {
+    border: 3px solid #ccc;
+    border-bottom: 0;
+  }
+}
+
+/* art page */
+
+/* styling and adjusting the sizes of the containers for images of my art */
+.image1-container, .image2-container, .image3-container{
+  max-width: 400px; /* I use 'max-width' instead of 'width' so the container adjusts in size when the webpage is adjusted to be smaller than 400px */
+  height: 550px;
+  margin: 10px auto;
+  border: 5px solid #b1e4db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* adjusting art images into their respective containers */
+.image1-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image2-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image3-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* a seperate container for one of the images as the height is different */
+.image4-container {
+  max-width: 400px; 
+  height: 450px; 
+  margin: 10px auto;
+  border: 5px solid #b1e4db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.image4-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* playlist page */
+
+/* styling the container so it looks like an actual music player */
+.song-player-container {
+  width: 400px;
+  height: 500px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #cee9ef;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* circle shape for the pictures of the song album covers */
+.song-image-container {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* song album cover images */
+.song-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* adjusting the size of the controls (includes the play, volume, playback button) for the music */
+.mp3-controls {
+  width: 300px;
+  margin: auto;
+}
+
+/* size of the rewind/previous and next/forward button */
+#prev-button, #next-button {
+  width: 50px;
+  height: 50px;
+}
+
+/* placement of the buttons */
+.buttons img {
+  margin: 0 30px;
+  cursor: pointer; /* when the cursor is hovering over the buttons, it changes to a pointer so clicking them is more clear to the user */
+}
+
+/* media query so the playlist adjusts to a minature verison of itself when the webpage is small or is viewed on a phone */
+@media screen and (max-width: 600px) {
+  .song-player-container {
+    max-width: 300px;
+    height: 260px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #cee9ef;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .song-image-container {
+    float: left; /* the image changes position to the top left of the mini verison of the music player */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+  
+  .song-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .mp3-controls {
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+  }
+  
+  .song-information {
+    margin-top: 37px; /* song information is adjusted to be beside the album image in the mini version of the music player */
+  }
+
+  #song-name {
+    text-overflow: ellipsis; /* when the text is too long to fit in the mini version of the music player, the portion of the text that flows outside the container is replaced by an ellipsis everything stays within the container*/
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 20px;
+  }
+
+  #composer-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 16px;
+  }
+}
+
+/* contact page */
+
+/* adjusting the size of the message box */
+.message-box {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* matching the area for the text to the size of the message box */
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+/* styling the send button */
+button {
+  padding: 10px 20px;
+}
+
+/* guide page */
+
+/* container for the image */
+.guide-image1 {
+  max-width: 500px; /* I use 'max-width' instead of 'width' so the container adjusts in size when the webpage is adjusted to be smaller than 500px */
+  height: 100px;
+  margin: 10px auto;
+  border: 5px solid #b1e4db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* fit the image to be in the container */
+.guide-image1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.guide-image2 {
+  max-width: 500px; /*I use 'max-width' instead of 'width' so the container adjusts in size when the webpage is adjusted to be smaller than 500px */
+  height: 160px;
+  margin: 10px auto;
+  border: 5px solid #b1e4db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+} 
+
+.guide-image2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* margin for the left and right sides of the page so the instructions are not right at the edge of the webpage */
+.margin {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* media query so the playlist adjusts to a minature verison of itself when the webpage is small or is viewed on a phone */
+@media screen and (max-width: 600px) {
+  
+  /* adjust the margin so when the screen size is smaller, the instructions span the whole width */
+  .margin {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Memory Book */
+
+.bubble1-container {
+  position: absolute;
+  top: 40%;
+  left: 63%;
+}
+
+/* styling a circle shape to hold an image */
+.bubble1 {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* styling the grad image to match the circle shape */
+.bubble1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bubble1 .creative-text {
+  position: absolute;
+  top: 50%;              /* center vertically */
+  left: 50%;             /* center horizontally */
+  transform: translate(-50%, -50%); /* perfect center */
+  color: rgb(0, 0, 0);          /* white text for visibility */
+  font-size: 18px;       /* adjust size as needed */
+  font-weight: bold;     /* make it stand out */
+  text-align: center;    /* center text */
+  padding: 5px 10px;     /* optional: padding for readability */
+  border-radius: 5px;    /* optional: rounded corners */
+}
+
+.bubble2-container {
+  position: absolute;
+  top: 40%;
+  left: calc(100% - 63%);  /* mirror horizontally */
+  transform: translateX(-100%);
+}
+
+/* styling another circle shape */
+.bubble2 {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* styling the other image of toronto to match the circle shape */
+.bubble2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bubble2 .events-text {
+  position: absolute;
+  top: 50%;              /* center vertically */
+  left: 50%;             /* center horizontally */
+  transform: translate(-50%, -50%); /* perfect center */
+  color: rgb(0, 0, 0);          /* white text for contrast */
+  font-size: 18px;       /* adjust size */
+  font-weight: bold;     /* bold text */
+  text-align: center;    /* center text */
+  padding: 5px 10px;     /* optional: padding */
+  border-radius: 5px;    /* optional: rounded corners */
+}
+
+.bubble3-container {
+  position: absolute;
+  top: 85%;
+  left: calc(100% - 63%);  /* mirror horizontally */
+  transform: translateX(-100%);
+}
+
+.bubble3 {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* styling the other image of toronto to match the circle shape */
+.bubble3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.bubble3 .travel-text {
+  position: absolute;
+  top: 50%;              /* center vertically */
+  left: 50%;             /* center horizontally */
+  transform: translate(-50%, -50%); /* perfect center */
+  color: rgb(0, 0, 0);          /* white text for contrast */
+  font-size: 18px;       /* adjust as needed */
+  font-weight: bold;     /* bold text */
+  text-align: center;    /* center text */
+  padding: 5px 10px;     /* optional: some padding */
+  border-radius: 5px;    /* optional: rounded corners */
+}
+
+.bubble4-container {
+  position: absolute;
+  top: 85%;
+  left: 63%;
+}
+
+.bubble4 {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* styling the other image of toronto to match the circle shape */
+.bubble4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bubble4 .milestones-text {
+  position: absolute;
+  top: 50%;              /* center vertically */
+  left: 50%;             /* center horizontally */
+  transform: translate(-50%, -50%); /* perfect centering */
+  color: rgb(0, 0, 0);          /* text color */
+  font-size: 18px;       /* adjust as needed */
+  font-weight: bold;     /* bold text */
+  text-align: center;    /* center alignment */
+  padding: 5px 10px;     /* optional: padding for better text look */
+  border-radius: 5px;    /* optional: rounded corners */
+}
+
+.bubble5-container {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.bubble5 {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* styling the other image of toronto to match the circle shape */
+.bubble5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bubble5 .songs-text {
+  position: absolute;
+  top: 50%;              /* center vertically */
+  left: 50%;             /* center horizontally */
+  transform: translate(-50%, -50%); /* perfect center */
+  color: rgb(0, 0, 0);          /* white text for contrast */
+  font-size: 18px;       /* adjust size as needed */
+  font-weight: bold;     /* bold text */
+  text-align: center;    /* center text */
+  padding: 5px 10px;     /* optional: padding */
+  border-radius: 5px;    /* optional: rounded corners */
+}
+
+.bubble6-container {
+  position: absolute;
+  top: 20%;
+}
+
+.bubble6 {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* styling the other image of toronto to match the circle shape */
+.bubble6 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bubble6 .entertainment-text {
+  position: absolute;
+  top: 50%;              /* center vertically */
+  left: 50%;             /* center horizontally */
+  transform: translate(-50%, -50%); /* perfect centering */
+  color: rgb(0, 0, 0);          /* text color for contrast */
+  font-size: 18px;       /* adjust size as needed */
+  font-weight: bold;     /* bold text */
+  text-align: center;    /* center text */
+  padding: 5px 10px;     /* optional: padding for readability */
+  border-radius: 5px;    /* optional: rounded corners */
+}
+
+.memory-title {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;       /* reduce width to force wrapping */
+  color: #ffbddc;
+  font-family: 'Baloo 2', cursive;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  z-index: 100;
+  text-shadow:
+    -1px -1px 0 #f486bf,  
+     1px -1px 0 #f486bf,
+    -1px  1px 0 #f486bf,
+     1px  1px 0 #f486bf;
+}
+
+/* bubbles */
+.bub1-container {
+  position: absolute;  /* absolute to move around */
+  top: 30%;
+  left: 35%;
+  animation: float 5s ease-in-out infinite alternate; /* animation name, duration, etc. */
+}
+
+.bub1 {
+  margin: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bub1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 150% 25%;
+  border-radius: 50%;
+  transform: scale(2); 
+}
+
+/* Animation keyframes */
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-30px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+}
+
+
+/* Position dropdown relative to Memory Book item */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Initially hide the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px; /* adjust as needed */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style links inside dropdown */
+.dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Add hover effect */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* creative workspace page */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section.splash
+{
+  position: relative;
+  width: 75%;
+  height: 70vh;
+  margin: 0 auto;  
+  background: url(images/italy.jpg), url(images/splash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: screen;
+} 
+
+.favourite {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;       /* reduce width to force wrapping */
+  color: #8accf5;
+  font-family: 'Baloo 2', cursive;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  z-index: 100;
+  text-shadow:
+    -1px -1px 0 #5490cf,  
+     1px -1px 0 #5490cf,
+    -1px  1px 0 #5490cf,
+     1px  1px 0 #5490cf;
+}
+
+.polaroid-gallery {
+  text-align: center;
+}
+
+.polaroid-card {
+  display: inline-block;
+  width: 275px; 
+  height: 450px;
+  margin: 50px;
+  padding: 5px;
+  background-color:#f1f1f1;
+  box-shadow:0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.polaroid-card img {
+  width: 100%; 
+  height: 85%;
+  object-fit: cover;
+}
+
+.polaroid-card figcaption {
+  font-size: 17px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+.polaroid-card:nth-of-type(even) {
+  transform: rotate(12deg);
+}
+
+.polaroid-card:nth-of-type(odd) {
+  transform: rotate(-12deg);
+}
+
+.polaroid-card:nth-of-type(even)::before {
+  content: "";
+  display: block;
+  background-color:rgba(222, 220, 200, 0.66);
+  width: 100px;
+  height: 25px;
+  transform: translate(-30px, -20px) rotate(-24deg);
+}
+
+.polaroid-card:nth-of-type(odd)::before {
+  content: "";
+  display: block;
+  background-color:rgba(222, 220, 200, 0.86);
+  width: 100px;
+  height: 25px;
+  transform: translate(215px, -5px) rotate(25deg);
+}
+
+.polaroid-card:hover {
+  transform:scale(1.5);
+  z-index: 10;    
+}
+
+/* Milestones page */
+body.gallery-page {
+  background: #f8d9af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.lemon-border {
+  position: relative;
+  display: inline-block;
+}
+
+.lemon-border img {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+/* Common styles for corner frames */
+.lemon-border::before,
+.lemon-border::after {
+  content: "";
+  position: absolute;
+  background-image: url('images/border-pattern.jpg'); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Top-left corner */
+.lemon-border::before {
+  top: -10px;
+  left: -10px;
+  width: 50%;
+  height: 50%;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+  box-sizing: border-box;
+  background-clip: border-box;
+}
+
+/* Bottom-right corner */
+.lemon-border::after {
+  bottom: -10px;
+  right: -10px;
+  width: 50%;
+  height: 50%;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  box-sizing: border-box;
+  background-clip: border-box;
+}
+
+.milestone-image {
+  position: absolute;
+  top: 10px;       /* adjust as needed */
+  left: 10px;      /* adjust as needed */
+  width: 50px;     /* adjust size */
+  height: 50px;
+  border-radius: 50%; /* optional: make it circular */
+  z-index: 5;      /* ensures it's on top */
+}
+
+
+/* songs page */
+
+body.songs-page{
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+.songs-page{
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  background: linear-gradient(to bottom right,#673AB7,#7E57C2);
+  box-shadow: 0.1px 4px 8px 4px rgba(0,0,0,0.5);
+}
+
+/*top_section*/
+.top_section{
+  margin: 1em 0;
+}
+.top_section h5{
+	color: #fff;
+	font-size: 1.5em;
+	font-family: 'Charmonman', cursive;
+}
+
+
+/*tracks part*/
+.tracks{
+  width: 90%;
+  max-height: 75vh;
+  overflow-y: scroll;
+  padding: 10px 0;
+  padding-bottom: 50px;
+}
+.tracks::-webkit-scrollbar {
+  display: none;
+}
+.tracks .song:not(:first-child){
+  margin-top: 1em;
+}
+.tracks .song{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 0 20px 20px 20px;
+  box-shadow: 0.1px 2px 2px rgba(0,0,0,0.1);
+}
+.tracks .song .more{
+  margin-left: 1.2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tracks .song .song_info p:nth-child(2){
+  font-size: 0.8em;
+  margin-top: 10px;
+  color: rgba(255,255,255,0.5);
+}
+.tracks .song  #play_btn{
+  height: 50px;
+  width: 50px;
+  border:none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background: none;
+  color: #fff;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+			inset -5px -5px 15px rgba(255,255,255,0.1),
+			-5px -5px 15px rgba(255,255,255,0.1);
+}
+.tracks .song button i{
+			font-size: 1.5em;
+}
+.tracks .song:not(:first-child){
+			margin-top: 15px;
+}
+.tracks .song .img{
+  height: 70px;
+  width: 80px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.tracks .song .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+/*controlls part*/
+.controlls{
+		   width: 75%;
+		   margin-top: 2.5em;
+}
+.progress_part{
+			width: 100%;
+			margin-bottom: 2em;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: space-between;
+}
+.progress_part p{
+  color: #fff;
+}
+.progress_part .durations{
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+} 
+.progress_part #slider{
+  width: 100%;
+}
+.controlls_btns{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.controlls_btns button{
+  height: 50px;   
+  width: 50px;   
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 0.5em;
+  background: none;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.controlls_btns button:hover{	
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+			inset -5px -5px 15px rgba(255,255,255,0.1),
+			5px 5px 15px rgba(0,0,0,0.3),
+			-5px -5px 15px rgba(255,255,255,0.1);
+}
+.controlls_btns button i{
+  font-size: 1.3em;
+}
+
+.controlls_btns button:nth-child(2){
+  border-radius: 50%;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+			inset -5px -5px 15px rgba(255,255,255,0.1),
+			5px 5px 15px rgba(0,0,0,0.3),
+			-5px -5px 15px rgba(255,255,255,0.1);
+}
+.controlls_btns button i{
+  color: #fff;
+}
+
+
+/*range slider*/
+#slider{
+  -webkit-appearance: none;
+  outline: none;
+  width: 85%;
+  height: 4px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  background: #673AB7;
+  box-shadow: 0.1px 8px 8px 2px rgba(0,0,0,0.2) inset,
+	            0.1px 8px 8px 2px rgba(0,0,0,0.2);
+}
+
+
+/*popup_music_player part*/
+.main .popup_music_player{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #673AB7;
+  padding: 5px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px 15px 0 0;
+  transform: translateY(110%);
+  transition: 0.4s;
+  box-shadow: 0.1px 4px 8px 4px rgba(0,0,0,0.5);
+}
+
+/*top*/
+.top{
+  width: 100%;
+  padding: 10px 20px;
+  color: #ccc;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+}
+.top p{
+  font-family: 'Charmonman', cursive;
+}
+.top i{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+background: rgba(255,255,255,0.1);
+}
+.popup_music_player .song_img{
+margin-top: 2em;
+height: 200px;
+width: 200px;
+border-radius: 50%;
+overflow: hidden;
+box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+            inset -5px -5px 15px rgba(255,255,255,0.1),
+			5px 5px 15px rgba(0,0,0,0.3),
+			-5px -5px 15px rgba(255,255,255,0.1);
+}
+.popup_music_player img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.song_description{
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.song_description h3{
+  font-size: 1.2em;
+  color: #fff;
+}
+.song_description p{
+  color: #ccc;
+  margin-top: 5px;
+}
+
+/*small music player*/
+.small_music_player{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  background: #673AB7;
+  transition: 0.4s;
+  transform: translateY(80px);
+}
+.s_player_img{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-right: 2em;
+  box-shadow: 0.1px 4px 8px 5px rgba(0,0,0,0.3);
+}
+.playing_img{
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.small_music_player p{
+  color: #fff;
+}
+.s_player_img .playing_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#up_player{
+  position: absolute;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);	
+}
+#artist_name{
+  font-size: 0.8em;
+  margin-top: 5px;
+  color: rgba(255,255,255,0.5);
+}
+
+
+/*wave animation*/
+.wave_animation{
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+}
+.wave_animation li{
+  list-style: none;
+  width: 5px;
+  margin: 0 3px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.4);
+  animation: animate 0.5s linear alternate infinite;
+			
+}
+.wave_animation li:nth-child(2){
+  animation-delay: 0.4s;
+}
+.wave_animation li:nth-child(3){
+  animation-delay: 1s;
+}
+.wave_animation li:nth-child(4){
+  animation-delay: 0.4s;
+}
+.wave_animation li:nth-child(5){
+  animation-delay: 1s;
+}
+
+
+/*animation*/
+@keyframes animate {
+  0%{
+    height: 0px;
+  }
+  100%{
+	height: 20px;
+  }
+}
+
+/* entertainment page */
+.entertainment-gallery {
+  text-align: center;
+}
+
+.entertainment-card {
+  display: inline-block;
+  width: 250px; 
+  height: 350px;
+  margin: 50px;
+  padding: 5px;
+  background-color:#f1f1f1;
+  box-shadow:0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  position: relative;
+  overflow: visibile;
+  border-radius: 8px;
+}
+
+.entertainment-card img {
+  width: 90%; 
+  height: 90%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.entertainment-card figcaption {
+  font-size: 17px;
+  margin-top: 16px;
+  margin-bottom: 9px;
+  letter-spacing: 2px;
+}
+
+.entertainment-card:hover {
+  transform:scale(1.4);
+  z-index: 10;    
+}
+
+.rating {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.rating i {
+  color: #FFD700; /* gold star color */
+  margin: 0 2px; /* optional: spacing between stars */
+}
+
+/* flip card */
+.flip-container {
+  perspective: 1000px;
+  width: 90%; /* matches image width */
+  height: 90%;
+  margin-top: -50px; /* pop out */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  position: relative;
+}
+
+.flip-container.flipped .flip-card {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.flip-back {
+  background-color: #a5faff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* mundane page */
+body.mundane-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.mundane-gallery {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.mundane {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: rotateGallery 16s infinite;
+}
+
+.mundane img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes rotateGallery {
+  0% { transform: translateX(0%); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }
+}
+
+/* travel page */
+.travel-pics {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+.travel-pics .carousel {
+  width: 300px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.carousel img {
+  -webkit-box-reflect: below 20px linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+}
+
+body.travel-bg {
+  background-color: #000; /* make navbar black only on this page */
+}
+
+/* hides the stupid bug with the blue box affecting the first 3 images*/
+.carousel li:nth-child(-n+3) {
+  opacity: 0;
+  pointer-events: none; /* prevent clicks on invisible element */
+}
+
+/* i want mundane page */
+
+/* milestones page */
+
+.hexagon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* space between hexagons */
+  padding: 40px;
+}
+
+.clipped-border {
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(grey, lightgrey);
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.clipped-border img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.clipped-border:before {
+  content: '';
+  position: absolute;
+  opacity: 0.5;
+  width: 130%;
+  height: 45px;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
+
+.clipped-border:hover:before {
+  transform: translate(-80px, 505%) rotate(45deg);
+}
+
+.clipped-border:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+/* special events page */

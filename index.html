@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <head>
+    <!-- meta tag to allow the website to be responsive and viewable on different devices/screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- navigation menu -->
+    <ul>
+      <!-- set home page active -->
+      <li><a href="index.html" class ="active">Home</a></li> 
+      <li><a href="toronto.html" class ="">Toronto</a></li>
+      <li><a href="art.html" class ="">Art</a></li>
+      <li><a href="playlist.html" class ="">Playlist</a></li>
+      <li><a href="contact.html" class ="">Contact</a></li>
+      <li><a href="guide.html" class ="">Guide</a></li>
+      <li class="dropdown">
+        <a href="memories.html">Memory Book</a>
+        <div class="dropdown-content">
+          <a href="creative-ws.html">Creative Workspace</a>
+          <a href="milestones.html">Milestones</a>
+          <a href="entertainment.html" class="">Entertainment</a>
+          <a href="travel.html">Travel</a>
+        </div>
+      </li>
+    </ul>
+    <div id="content">
+      <h2>Welcome to my website!</h2>
+      <h2>About me</h2>
+      <!-- container to hold text/information -->
+      <div class="container">
+          <p>Born and raised in Toronto; 100% night owl; hoodie enthusiast; drama addict; aspiring to find the perfect snack</p>
+      </div>
+      <!-- add a space underneath (adjusted in the css file) to seperate the two textboxes -->
+      <div class="space-underneath"></div>
+      <!-- another container for a second textbox -->
+      <div class="container">
+        <!-- I want two images in a circular shape on the page so I add a class so I can design the circles in the .css file. 
+          The reason the circles are in the container is so that they are able to move with the webpage as its size is adjusted or when it is scrolled. -->
+        <div class="circle1">
+          <img src="images/grad.png" alt="Grad">
+        </div>
+        <div class="circle2">
+          <img src="images/toronto.jpeg" alt="Toronto">
+        </div>
+        <!-- add a class so the information in this text box can be left-aligned -->
+        <p class ="left-aligned"><b>Fun fact:</b> I like collecting coins</p>
+        <p class ="left-aligned"><b>Hobbies:</b> Arts and crafts, skating, piano, journaling</p>
+        <p class ="left-aligned"><b>Comfort songs:</b> Set Fire to the Rain by Adele, Silence by Marshmello ft.Khalid</p>
+        <p class ="left-aligned"><b>Favourite books:</b> Wonder by R.J Palacio, City of Bones by Cassandra Clare</p>
+        <p class ="left-aligned"><b>Inspirational films:</b> Better days by Kwok Cheung Tsang, All Quiet on the Wester Front (1979) by Delbert Mann</p>
+      </div>   
+    </div>
+  </body>
+</html>
