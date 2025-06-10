@@ -70,44 +70,6 @@ li .active {
 
 /* index/home page */
 
-/* styling a circle shape to hold an image */
-.circle1 {
-  margin-left: 550px;
-  margin-top: -240px;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background-color: #f1f1f1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* styling the grad image to match the circle shape */
-.circle1 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* styling another circle shape */
-.circle2 {
-  margin-left: -290px;
-  margin-top: -240px;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background-color: #f1f1f1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* styling the other image of toronto to match the circle shape */
-.circle2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
 /* adding a media query so that when the webpage size shrinks to a certain size, the pictures become hidden and only the information shows */
 @media screen and (max-width: 900px) {
   .circle1, .circle2 {
@@ -118,30 +80,6 @@ li .active {
 /* toronto  page */
 
 /* styling the grid container which is the structure of my information on this page */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* the grid has 2 columns and 4 rows */
-  grid-gap: 10px;
-  padding: 10px;
-  margin: 50px;
-}
-
-/* styling the individual items in the grid */
-.grid-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-/* adjusting the images that go in some sections of the grid */
-.image-grid img {
-  width: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
 
 /* media query for when the webpage becomes a certain size or when viewed from a phone, the grid becomes one column and the items are all vertically aligned */
 @media screen and (max-width: 900px) {
@@ -159,52 +97,6 @@ li .active {
     border-bottom: 0;
   }
 }
-
-/* art page */
-
-/* styling and adjusting the sizes of the containers for images of my art */
-.image1-container, .image2-container, .image3-container{
-  max-width: 400px; /* I use 'max-width' instead of 'width' so the container adjusts in size when the webpage is adjusted to be smaller than 400px */
-  height: 550px;
-  margin: 10px auto;
-  border: 5px solid #b1e4db;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* adjusting art images into their respective containers */
-.image1-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image2-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.image3-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* a seperate container for one of the images as the height is different */
-.image4-container {
-  max-width: 400px; 
-  height: 450px; 
-  margin: 10px auto;
-  border: 5px solid #b1e4db;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.image4-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* playlist page */
 
 /* styling the container so it looks like an actual music player */
@@ -307,24 +199,6 @@ li .active {
   }
 }
 
-/* contact page */
-
-/* adjusting the size of the message box */
-.message-box {
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-/* matching the area for the text to the size of the message box */
-textarea {
-  width: 100%;
-  resize: vertical;
-}
-
-/* styling the send button */
-button {
-  padding: 10px 20px;
-}
 
 /* guide page */
 
@@ -1220,6 +1094,11 @@ box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
 }
 
 /* entertainment page */
+
+.entertainment-instructions {
+  text-align: center;
+}
+
 .entertainment-gallery {
   text-align: center;
 }
@@ -1308,7 +1187,7 @@ box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
 }
 
 .flip-back {
-  background-color: #a5faff;
+  background-color: #cafcff;
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
@@ -1318,57 +1197,15 @@ box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
   box-sizing: border-box;
 }
 
-/* mundane page */
-body.mundane-gallery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f0f0f0;
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.mundane-gallery {
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  position: relative;
-}
-
-.mundane {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  animation: rotateGallery 16s infinite;
-}
-
-.mundane img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-@keyframes rotateGallery {
-  0% { transform: translateX(0%); }
-  25% { transform: translateX(-100%); }
-  50% { transform: translateX(-200%); }
-  75% { transform: translateX(-300%); }
-  100% { transform: translateX(0%); }
-}
-
-/* travel page */
-.travel-pics {
+/* milestones page */
+.milestone-pics {
   width: 100%;
   height: 100vh;
   background: #000;
   overflow: hidden;
 }
 
-.travel-pics .carousel {
+.milestone-pics .carousel {
   width: 300px;
   margin: 0 auto;
   overflow: visible;
@@ -1378,7 +1215,7 @@ body.mundane-gallery {
   -webkit-box-reflect: below 20px linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
 }
 
-body.travel-bg {
+body.milestones-bg {
   background-color: #000; /* make navbar black only on this page */
 }
 
@@ -1388,9 +1225,11 @@ body.travel-bg {
   pointer-events: none; /* prevent clicks on invisible element */
 }
 
-/* i want mundane page */
+/* mundane page */
 
-/* milestones page */
+.mundane-instructions {
+  text-align: center;
+}
 
 .hexagon {
   display: flex;
@@ -1439,4 +1278,47 @@ body.travel-bg {
   z-index: 10;
 }
 
-/* special events page */
+/* video recaps page */
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.video-container .video {
+  height: 15rem;
+  width: 25rem;
+  margin: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.video-container .video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+}
+
+.video-container .video video:hover {
+  transition: 0.2s linear;
+  transform: scale(1.3);
+}
+
+.video-container .video .active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+}
+
+.video-container .video .active:hover {
+  transition: none;
+  transform: translate(-50%, -50%), scale(1.3);
+}

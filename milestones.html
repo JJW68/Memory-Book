@@ -3,9 +3,11 @@
     <!-- meta tag to make the website responsive and viewable on different devices/screen sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery.flipster.min.css">
   </head>
-  <body class="milestones-gallery">
+  <body class="milestones-bg">
     <!-- navigation menu -->
     <ul>
       <li class="dropdown">
@@ -17,28 +19,33 @@
           <a href="songs.html" class="">Songs</a>
           <a href="travel.html" class="">Travel</a>
           <a href="special-events.html" class="">Special Events</a>
+          <a href="mundane.html" class="">Mundane</a>
+          <a href="video-recaps.html" class="">Video Recaps</a>
         </div>
       </li>
     </ul>
 
-    <div class = "hexagon">
-      <div class="clipped-border">
-        <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.gettyimages.com.au%2Fgi-resources%2Fimages%2Ffrontdoor%2Fcreative%2FPanoramicImagesRM%2FFD_image.jpg&f=1" id="clipped">
+    <div class="milestone-pics">
+      <div class="carousel">
+        <ul>
+          <li><img src="images/eighteenth-bday.jpg"></li>
+          <li><img src="images/eighteenth-bday.jpg"></li>
+          <li><img src="images/eighteenth-bday.jpg"></li>
+          <li><img src="images/eighteenth-bday.jpg"></li>
+          <li><img src="images/hs-grad.jpg"></li>
+          <li><img src="images/first-poker.jpg"></li>
+          <li><img src="images/first-starbucks.jpg"></li>
+          <li><img src="images/firstyr-orientation.jpg"></li>
+        </ul>
       </div>
-      <div class="clipped-border">
-        <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fbpucette.b.p.pic.centerblog.net%2Ffv86ll9r.jpg&f=1" id="clipped">
-      </div>
-      <div class="clipped-border">
-        <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimagejournal.org%2Fwp-content%2Fuploads%2Fbb-plugin%2Fcache%2F23466317216_b99485ba14_o-panorama.jpg&f=1" id="clipped">
-      </div>
-        <div class="clipped-border">
-        <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.lokeshdhakar.com%2Fprojects%2Flightbox2%2Fimages%2Fimage-4.jpg&f=1" id="clipped">
-      </div>
-        <div class="clipped-border">
-        <img src="https://images.pexels.com/photos/932638/pexels-photo-932638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" id="clipped">
-      </div>
-      <div class="shadow"></div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jquery.flipster.min.js"></script>
+    <script>
+      $('.carousel').flipster({
+        style:'carousel',
+        spacing: -0.2,
+      });
+    </script>
   </body>
 </html>
