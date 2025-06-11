@@ -1280,45 +1280,76 @@ body.milestones-bg {
 
 /* video recaps page */
 
-.video-container {
+.recaps-container {
+  position: relative;
+  min-height: 100vh;
+  background: rgb(255, 255, 255);
+}
+
+.recaps-container .video-container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
 }
 
-.video-container .video {
-  height: 15rem;
-  width: 25rem;
-  margin: 2rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+.recaps-container .video-container .video {
+  height: 250px;
+  width: 350px;
+  border: 5px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
   overflow: hidden;
-  border-radius: 1rem;
 }
 
-.video-container .video video {
+.recaps-container .video-container .video video {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  outline: none;
-  border: none;
-}
-
-.video-container .video video:hover {
   transition: 0.2s linear;
-  transform: scale(1.3);
 }
 
-.video-container .video .active {
+.recaps-container .video-container .video:hover video {
+  transform: scale(1.2);
+}
+
+.container .popup-video {
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.container .popup-video video {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: auto;
-  width: 80%;
-  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  width: 750px;
+  border-radius: 5px;
+  border: 3px solid #fff;
+  object-fit: cover;
 }
 
-.video-container .video .active:hover {
-  transition: none;
-  transform: translate(-50%, -50%), scale(1.3);
+.container .popup-video span {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: bolder;
+  z-index: 100;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .container .popup-video video {
+    width: 95%;
+  }
 }

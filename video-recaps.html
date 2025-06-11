@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="jquery.flipster.min.css">
   </head>
   <body class="">
@@ -26,28 +27,31 @@
       </li>
     </ul>
 
-    <div class="container">
-      <div class="heading">video Gallery</div>
+    <div class="recaps-container">
       <div class="video-container">
-          <div class="video">
-            <video src="videos/2023-recap.mp4"> muted</video>
-          </div>
+        <div class="video">
+          <video src="videos/2023-recap.mp4" muted controls></video>
+        </div>
       </div>
 
+      <div class="popup-video">
+        <span>&times;</span>
+        <video src="videos/2023-recap.mp4" muted autoplay controls></video>
+      </div>
     </div>
-    
-    <script>
-      var video = document.querySelectorAll('video')
-      video.forEach(play => play.addEventListener('click', () => {
-        play.classList.toggle('active');
 
-        if(play.paused) {
-          play.play();
-        } else {
-          play.pause();
-          play.currentTime = 0;
+    <script>
+      document.querySelectorAll('.video-container video').forEach(vid => {
+        vid.onclick = () => {
+          document.querySelector('.popup-video').style.display = 'block';
+          document.querySelector('.popup-video video').src = vid.getAttribute('src');
         }
-      }))
+        
+      });
+
+      document.querySelector('.popup-video span').onclick = () => {
+        document.querySelector('.popup-video').style.display = 'none';
+      }
     </script>
   </body>
 </html>
